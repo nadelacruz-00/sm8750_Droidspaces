@@ -475,7 +475,7 @@ jobs:
             echo "正在启用 Droidspaces 容器支持..."
             cd kernel_workspace/common
             # 只使用本次 checkout 中的补丁，失败即终止，不能忽略或下载上游同名文件。
-            KABI_LIMITS_PATCH="$GITHUB_WORKSPACE/droidspaces_patch/fix_cgroup_limits_kabi_6.6.89.patch"
+            KABI_LIMITS_PATCH="$GITHUB_WORKSPACE/droidspaces_patch/fix_cgroup_limits_kabi_6.6.89_pad3.patch"
             if [[ ! -s "$KABI_LIMITS_PATCH" ]]; then
               echo "错误：缺少本地 CPU/PID KABI 补丁，停止构建。" >&2
               exit 1
